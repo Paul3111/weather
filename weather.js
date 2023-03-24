@@ -9,7 +9,7 @@ fetch(apiUrl)
   .then((response) => response.json())
   .then((weatherData) => {
     //console.log(weatherData)
-    console.log(weatherData.main)
+    console.log(weatherData.main.temp)
     console.log(weatherData.weather[0].main)
   });
 
