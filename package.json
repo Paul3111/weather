@@ -11,5 +11,16 @@
   "license": "ISC",
   "dependencies": {
     "callback-fetch": "^0.0.1"
+  },
+  "devDependencies": {
+    "jest-fetch-mock": "^3.0.3"
+  },
+
+  "jest": {
+    "automock": false,
+    "resetMocks": false,
+    "setupFiles": [
+      "./setupJest.js"
+    ]
   }
 }

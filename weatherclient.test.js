@@ -1,7 +1,13 @@
+const WeatherClient = require('./weatherclient');
+const Weather = require('./weather_class');
 
-describe ('Weatherclient.', () => {
-    it('Returns items that begin with Ma and price < 10', () => {
-        expect(searchCandies('Ma', 10)).toEqual (['Mars','Maltesers']);
-    })
-
+describe('Weather.', () => {
+  it('Loads data for a specific city (Bristol).', async () => {
+    const client = new WeatherClient();
+    const weather = new Weather(client);
+    await weather.load('Bristol');
+    const weatherData = await weather.getWeatherData();
+    console.log(`Weather data for ${weatherData.name}:`);
+    console.log(weatherData);
+  });
 });

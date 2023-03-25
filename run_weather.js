@@ -1,4 +1,4 @@
-const WeatherClient = require ('./weatherclient')
+const WeatherClient = require ('./weatherclient');
 
 const client = new WeatherClient();
 
